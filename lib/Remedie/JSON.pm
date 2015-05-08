@@ -27,7 +27,7 @@ sub encode {
         if (my $method = overload::Method($obj, q(""))) {
             return $obj->$method();
         } else {
-            croak sprintf qq(Can't locate object method "TO_JSON" via pacakge "%s"), ref $obj;
+            croak sprintf qq(Can't locate object method "TO_JSON" via package "%s"), ref $obj;
         }
     };
 
